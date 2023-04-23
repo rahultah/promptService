@@ -10,6 +10,7 @@ class InitialiseMiddleware{
     }
     static addRoutes(app){
         app.use(express.urlencoded({urlencoded:true}));
+        app.use(express.json());
         app.use("/promptService",require("../../routes"))
     }
 }
